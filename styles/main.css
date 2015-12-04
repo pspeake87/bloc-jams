@@ -99,6 +99,11 @@
      max-width: 64rem;
  }
 
+.container.narrow {
+     max-width: 56rem;
+ }
+
+
 .clearfix:before,
 .clearfix:after {
    content: " ";
