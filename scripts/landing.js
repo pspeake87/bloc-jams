@@ -10,9 +10,7 @@ var pointsArray = document.getElementsByClassName('point');
       points[i].style.WebkitTransform = "scaleX(1) translateY(0)";
     }
     
-    for (i = 0; i < points.length; i++) {
-        revealPoint(i);
-    }
+    forEach(points, revealPoint);
      
  
  };
