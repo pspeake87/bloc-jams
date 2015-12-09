@@ -20,10 +20,12 @@ var pointsArray = document.getElementsByClassName('point');
          animatePoints(pointsArray);
      }
      var sellingPoints = document.getElementsByClassName('selling-points')[0];
+     var scrollDistance = sellingPoints.getBoundingClientRect().top - window.innerHeight + 200;
+     
      
      window.addEventListener("scroll", function(event) {
-     var scrollDistance = sellingPoints.getBoundingClientRect().top - window.innerHeight + 200;
-         if (document.body.scrollTop >= scrollDistance) {
+        var bodyScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+         if (bodyScrollTop >= scrollDistance) {
              animatePoints(pointsArray);   
          }
      });
